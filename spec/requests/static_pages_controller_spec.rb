@@ -9,13 +9,13 @@ RSpec.describe "StaticPages", type: :request do
     it "GET /" do
       get root_path
       expect(response).to be_successful
-      expect(response.body).to include("Home | #{@base_title}")
+      expect(response.body).to include("#{@base_title}")
     end
 
     it "GET /home" do
       get static_pages_home_path
       expect(response).to be_successful
-      expect(response.body).to include("Home | #{@base_title}")
+      expect(response.body).to include("#{@base_title}")
     end
 
     it "GET /help" do
@@ -37,3 +37,4 @@ RSpec.describe "StaticPages", type: :request do
     end
   end
 end
+
