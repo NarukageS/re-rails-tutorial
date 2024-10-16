@@ -1,0 +1,3 @@
+module DecorateHelpers
+  def
+end

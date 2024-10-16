@@ -12,26 +12,20 @@ RSpec.describe "StaticPages", type: :request do
       expect(response.body).to include("#{@base_title}")
     end
 
-    it "GET /home" do
-      get static_pages_home_path
-      expect(response).to be_successful
-      expect(response.body).to include("#{@base_title}")
-    end
-
     it "GET /help" do
-      get static_pages_help_path
+      get help_path
       expect(response).to be_successful
       expect(response.body).to include("Help | #{@base_title}")
     end
 
     it "GET /about" do
-      get static_pages_about_path
+      get about_path
       expect(response).to be_successful
       expect(response.body).to include("About | #{@base_title}")
     end
 
     it "GET /contact" do
-      get static_pages_contact_path
+      get contact_path
       expect(response).to be_successful
       expect(response.body).to include("Contact | #{@base_title}")
     end
