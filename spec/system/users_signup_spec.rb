@@ -25,5 +25,6 @@ RSpec.describe 'ユーザー登録', type: :system do
     after_count = User.count
     expect(after_count).to eq(before_count + 1)
     expect(response).to redirect_to(User.last)
+    expect(logged_in?).to be_truthy
   end
 end

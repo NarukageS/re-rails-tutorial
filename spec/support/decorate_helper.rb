@@ -1,3 +1,0 @@
-module DecorateHelpers
-  def
-end
